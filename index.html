@@ -1,71 +1,92 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Phòng Chống Bạo Lực Học Đường</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f4f6f9;
+      background: #f5f7fa;
       color: #333;
     }
 
     header {
-      background-color: #007acc;
+      background: linear-gradient(90deg, #007acc, #00b0ff);
       color: white;
-      padding: 20px 40px;
+      padding: 30px 20px;
       text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
 
     nav {
-      margin-top: 10px;
+      margin-top: 15px;
     }
 
     nav a {
       color: white;
-      margin: 0 15px;
       text-decoration: none;
+      margin: 0 15px;
       font-weight: bold;
+      transition: 0.3s;
     }
 
     nav a:hover {
       text-decoration: underline;
     }
 
-    section {
-      padding: 40px;
-      max-width: 1000px;
-      margin: 20px auto;
-      background-color: white;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      line-height: 1.6;
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    h2, h3 {
+    section {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
       color: #007acc;
+      margin-top: 0;
+    }
+
+    h3 {
+      color: #004d73;
+      margin-bottom: 10px;
     }
 
     ul {
-      margin: 0;
       padding-left: 20px;
-      list-style: disc;
+      line-height: 1.6;
     }
 
     footer {
+      text-align: center;
       background-color: #007acc;
       color: white;
-      text-align: center;
       padding: 20px;
-      margin-top: 20px;
+      font-size: 0.9rem;
     }
 
-    @media (max-width: 600px) {
-      section {
-        padding: 20px;
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.8rem;
       }
       nav {
         display: flex;
@@ -77,124 +98,64 @@
 </head>
 <body>
 
-<header>
-  <h1>Phòng Chống Bạo Lực Học Đường</h1>
-  <nav>
-    <a href="#gioithieu">Giới thiệu</a>
-    <a href="#nguyennhan">Nguyên nhân & Hậu quả</a>
-    <a href="#giaiphap">Giải pháp</a>
-    <a href="#lienhe">Liên hệ</a>
-  </nav>
-</header>
+  <header>
+    <h1>Phòng Chống Bạo Lực Học Đường</h1>
+    <nav>
+      <a href="#gioithieu">Giới thiệu</a>
+      <a href="#nguyennhan">Nguyên nhân</a>
+      <a href="#giaiphap">Giải pháp</a>
+      <a href="#lienhe">Liên hệ</a>
+    </nav>
+  </header>
 
-<section id="gioithieu">
-  <h2>Giới thiệu</h2>
-  <p>Bạo lực học đường đang là một vấn đề nghiêm trọng ảnh hưởng đến tinh thần và thể chất của học sinh. Website này nhằm tuyên truyền, nâng cao nhận thức và kêu gọi hành động chung tay phòng chống bạo lực học đường.</p>
-</section>
+  <main>
+    <section id="gioithieu">
+      <h2>Giới thiệu</h2>
+      <p>Bạo lực học đường đang là một vấn đề nghiêm trọng ảnh hưởng đến tinh thần và thể chất của học sinh. Website này nhằm tuyên truyền, nâng cao nhận thức và kêu gọi hành động chống lại bạo lực học đường.</p>
+    </section>
 
-<section id="nguyennhan">
-  <h2>Nguyên nhân & Hậu quả</h2>
-  
-  <h3>1. Nguyên nhân chi tiết</h3>
-  <ul>
-    <li><strong>Gia đình thiếu quan tâm, giáo dục chưa đầy đủ:</strong>
-      <ul>
-        <li>Trẻ em lớn lên trong môi trường thiếu sự yêu thương, bị bạo hành hoặc không được dạy cách xử lý cảm xúc, dễ trở nên hung hăng.</li>
-        <li>Cha mẹ không gương mẫu, sử dụng bạo lực trong giao tiếp.</li>
-      </ul>
-    </li>
-    <li><strong>Ảnh hưởng từ môi trường xã hội:</strong>
-      <ul>
-        <li>Truyền thông, mạng xã hội và trò chơi điện tử bạo lực tác động tiêu cực đến học sinh.</li>
-        <li>Một số em coi bạo lực là phương tiện để thể hiện sức mạnh, khẳng định vị thế.</li>
-      </ul>
-    </li>
-    <li><strong>Thiếu kỹ năng sống và kiểm soát cảm xúc:</strong>
-      <ul>
-        <li>Không được trang bị đầy đủ kỹ năng giao tiếp, giải quyết mâu thuẫn và kiểm soát cảm xúc.</li>
-        <li>Học sinh dễ bị kích động và không biết cách kiềm chế cảm xúc khi đối mặt với xung đột.</li>
-      </ul>
-    </li>
-    <li><strong>Áp lực học tập và tâm lý tuổi dậy thì:</strong>
-      <ul>
-        <li>Sự căng thẳng từ việc học và kỳ vọng của gia đình, nhà trường tạo ra áp lực tâm lý lớn.</li>
-        <li>Các vấn đề như tự ti, ganh đua hay cố gắng bắt nạt người khác để khẳng định bản thân.</li>
-      </ul>
-    </li>
-    <li><strong>Thiếu sự giám sát và can thiệp từ nhà trường:</strong>
-      <ul>
-        <li>Trường học không có biện pháp phát hiện sớm hoặc xử lý kịp thời các biểu hiện bạo lực.</li>
-        <li>Thiếu kênh phản ánh an toàn và hiệu quả cho học sinh và phụ huynh.</li>
-      </ul>
-    </li>
-  </ul>
-  
-  <h3>2. Hậu quả nghiêm trọng</h3>
-  <ul>
-    <li><strong>Đối với nạn nhân:</strong>
-      <ul>
-        <li>Tổn thương tâm lý, lo âu, trầm cảm, sợ hãi đến trường, thậm chí có nguy cơ tự tử.</li>
-        <li>Suy giảm kết quả học tập, mất tự tin và rối loạn tâm lý lâu dài.</li>
-      </ul>
-    </li>
-    <li><strong>Đối với học sinh gây bạo lực:</strong>
-      <ul>
-        <li>Hình thành thói quen xấu, dễ tái phạm và lệch lạc về đạo đức.</li>
-        <li>Gặp rắc rối với pháp luật khi hành vi leo thang thành tình huống nghiêm trọng.</li>
-        <li>Bị xa lánh và mất đi niềm tin từ bạn bè, thầy cô và cộng đồng.</li>
-      </ul>
-    </li>
-    <li><strong>Đối với nhà trường và xã hội:</strong>
-      <ul>
-        <li>Môi trường học không còn an toàn, ảnh hưởng tiêu cực đến tinh thần và chất lượng giáo dục.</li>
-        <li>Gia tăng tỷ lệ bỏ học, tội phạm vị thành niên và gánh nặng xã hội về vấn đề tâm lý của giới trẻ.</li>
-      </ul>
-    </li>
-  </ul>
-</section>
+    <section id="nguyennhan">
+      <h2>Nguyên nhân & Hậu quả</h2>
 
-<section id="giaiphap">
-  <h2>Giải pháp phòng chống bạo lực học đường</h2>
-  
-  <h3>Đối với học sinh:</h3>
-  <ul>
-    <li>Học các kỹ năng sống: giao tiếp, lắng nghe, giải quyết xung đột và kiểm soát cảm xúc.</li>
-    <li>Được khuyến khích chia sẻ và phản ánh các vấn đề với giáo viên, cha mẹ hoặc chuyên gia tâm lý.</li>
-    <li>Tham gia các hoạt động tập thể, xây dựng tinh thần đồng đội và hỗ trợ lẫn nhau.</li>
-  </ul>
-  
-  <h3>Đối với gia đình:</h3>
-  <ul>
-    <li>Nuôi dạy con bằng tình thương và sự kiên nhẫn, tránh sử dụng bạo lực.</li>
-    <li>Lắng nghe và theo dõi những thay đổi bất thường về cảm xúc và hành vi của trẻ.</li>
-    <li>Làm gương trong cách giao tiếp và ứng xử, truyền đạt những giá trị tích cực.</li>
-  </ul>
-  
-  <h3>Đối với nhà trường:</h3>
-  <ul>
-    <li>Xây dựng và thực thi quy tắc ứng xử học đường một cách nghiêm túc.</li>
-    <li>Đào tạo giáo viên để phát hiện sớm và xử lý các biểu hiện bạo lực.</li>
-    <li>Thiết lập các kênh phản ánh, hộp thư góp ý và đường dây nóng hỗ trợ học sinh.</li>
-  </ul>
-  
-  <h3>Đối với xã hội và cơ quan chức năng:</h3>
-  <ul>
-    <li>Tổ chức chiến dịch truyền thông nhằm nâng cao nhận thức cộng đồng về vấn đề bạo lực học đường.</li>
-    <li>Xây dựng các chính sách, quy định xử lý hành vi bạo lực một cách rõ ràng và nghiêm minh.</li>
-    <li>Phối hợp liên ngành giữa giáo dục, y tế, công an và các tổ chức xã hội để can thiệp và phòng ngừa hiệu quả.</li>
-  </ul>
-</section>
+      <h3>Nguyên nhân</h3>
+      <ul>
+        <li>Thiếu sự quan tâm từ gia đình và áp lực trong học tập.</li>
+        <li>Ảnh hưởng tiêu cực từ truyền thông và xã hội.</li>
+        <li>Thiếu kỹ năng sống, kỹ năng giao tiếp và kiểm soát cảm xúc.</li>
+        <li>Môi trường học tập thiếu thân thiện và hỗ trợ.</li>
+      </ul>
 
-<section id="lienhe">
-  <h2>Liên hệ</h2>
-  <p>Nếu bạn hoặc người thân gặp phải bạo lực học đường, đừng ngần ngại liên hệ với nhà trường, chuyên gia tâm lý hoặc các tổ chức bảo vệ trẻ em.</p>
-  <p><strong>Email:</strong> hotro@baoluchocduong.vn</p>
-  <p><strong>Điện thoại:</strong> 1800 123 456</p>
-</section>
+      <h3>Hậu quả</h3>
+      <ul>
+        <li>Gây tổn thương tâm lý, ảnh hưởng đến sức khỏe tinh thần học sinh.</li>
+        <li>Gây mất đoàn kết, chia rẽ trong lớp học và nhà trường.</li>
+        <li>Dẫn đến kết quả học tập giảm sút hoặc bỏ học.</li>
+        <li>Tạo ra vòng xoáy bạo lực tiếp diễn và lan rộng.</li>
+      </ul>
+    </section>
 
-<footer>
-  &copy; 2025 – Chung tay chống bạo lực học đường
-</footer>
+    <section id="giaiphap">
+      <h2>Biện pháp phòng chống</h2>
+      <ul>
+        <li>Giáo dục kỹ năng sống, kiểm soát cảm xúc cho học sinh.</li>
+        <li>Phối hợp giữa gia đình và nhà trường để kịp thời phát hiện, ngăn chặn hành vi bạo lực.</li>
+        <li>Tạo môi trường học tập tích cực, thân thiện, không bạo lực.</li>
+        <li>Có kênh tiếp nhận và xử lý thông tin tố cáo, phản ánh an toàn.</li>
+        <li>Tổ chức các chương trình ngoại khóa, tuyên truyền nâng cao nhận thức.</li>
+      </ul>
+    </section>
+
+    <section id="lienhe">
+      <h2>Liên hệ hỗ trợ</h2>
+      <p>Nếu bạn hoặc người thân gặp phải bạo lực học đường, đừng ngần ngại liên hệ với nhà trường, chuyên gia tâm lý hoặc các tổ chức bảo vệ trẻ em.</p>
+      <p><strong>Email:</strong> hotro@baoluchocduong.vn</p>
+      <p><strong>Điện thoại:</strong> 1800 123 456</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 – Chung tay chống bạo lực học đường
+  </footer>
 
 </body>
 </html>
