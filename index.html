@@ -4,16 +4,301 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chung Tay Đẩy Lùi Bạo Lực Học Đường</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Reset và font chữ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f9f9f9;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        nav ul li {
+            margin: 0 15px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: #3498db;
+            bottom: 0;
+            left: 0;
+            transition: width 0.3s;
+        }
+        
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background: linear-gradient(to right, transparent, #ddd, transparent);
+            margin: 30px auto;
+            max-width: 800px;
+        }
+        
+        /* Hero section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('school.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 60px;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.3;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        /* Main content sections */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-white {
+            background-color: white;
+        }
+        
+        .section-gray {
+            background-color: #f5f5f5;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2rem;
+            color: #2c3e50;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: #3498db;
+            margin: 15px auto 0;
+        }
+        
+        /* Violence types */
+        .violence-types {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .violence-type {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        
+        .violence-type:hover {
+            transform: translateY(-10px);
+        }
+        
+        .violence-icon {
+            font-size: 3rem;
+            color: #e74c3c;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        
+        .violence-type h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        /* Causes section */
+        .causes-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .cause-item {
+            margin-bottom: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .cause-item h3 {
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .cause-item ul {
+            padding-left: 20px;
+        }
+        
+        .cause-item li {
+            margin-bottom: 8px;
+        }
+        
+        /* Effects section */
+        .effects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .effect-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .effect-card h3 {
+            color: #e74c3c;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        /* Prevention section */
+        .prevention-steps {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: 30px;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            align-items: center;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-right: 25px;
+            flex-shrink: 0;
+        }
+        
+        .step-content h3 {
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 992px) {
+            .violence-types {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .effects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 5px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .violence-types {
+                grid-template-columns: 1fr;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <div class="logo">
-                <img src="logo.png" alt="Logo phòng chống bạo lực học đường">
-                <h1>Chung Tay Đẩy Lùi Bạo Lực Học Đường</h1>
-            </div>
             <nav>
                 <ul>
                     <li><a href="#home">Trang chủ</a></li>
@@ -21,287 +306,213 @@
                     <li><a href="#causes">Nguyên nhân</a></li>
                     <li><a href="#effects">Hậu quả</a></li>
                     <li><a href="#prevention">Phòng tránh</a></li>
-                    <li><a href="#support">Hỗ trợ</a></li>
                 </ul>
             </nav>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
         </div>
     </header>
 
     <section id="home" class="hero">
         <div class="container">
-            <div class="hero-content">
-                <h2>HÃY LÊN TIẾNG VÌ MỘT MÔI TRƯỜNG HỌC TẬP AN TOÀN</h2>
-                <p>Bạo lực học đường không phải là giải pháp. Cùng nhau xây dựng môi trường học tập thân thiện, lành mạnh.</p>
-                <a href="#support" class="btn">Cần giúp đỡ?</a>
-            </div>
+            <h1>HÃY LÊN TIẾNG VÌ MỘT MÔI TRƯỜNG HỌC TẬP AN TOÀN</h1>
+            <p>Bạo lực học đường không phải là giải pháp. Cùng nhau xây dựng môi trường học tập thân thiện, lành mạnh.</p>
         </div>
     </section>
 
-    <section id="definition" class="definition">
+    <section id="definition" class="section section-white">
         <div class="container">
-            <h2>Khái Niệm Bạo Lực Học Đường</h2>
-            <div class="definition-content">
-                <div class="definition-text">
-                    <p>Bạo lực học đường là hành vi gây tổn hại về thể chất hoặc tinh thần của học sinh, xảy ra trong hoặc ngoài trường học, bao gồm:</p>
-                    <div class="violence-types">
-                        <div class="violence-type">
-                            <i class="fas fa-user-injured"></i>
-                            <h3>Bạo lực thể chất</h3>
-                            <p>Đánh, đá, xô đẩy, gây thương tích</p>
-                        </div>
-                        <div class="violence-type">
-                            <i class="fas fa-comment-slash"></i>
-                            <h3>Bạo lực ngôn ngữ</h3>
-                            <p>Chửi bới, đe dọa, bêu xấu, xúc phạm</p>
-                        </div>
-                        <div class="violence-type">
-                            <i class="fas fa-brain"></i>
-                            <h3>Bạo lực tinh thần</h3>
-                            <p>Chế giễu, bắt nạt, tẩy chay, cô lập</p>
-                        </div>
-                        <div class="violence-type">
-                            <i class="fas fa-laptop"></i>
-                            <h3>Bạo lực mạng</h3>
-                            <p>Cyberbullying, bôi nhọ trên mạng xã hội</p>
-                        </div>
-                    </div>
+            <h2 class="section-title">Khái Niệm Bạo Lực Học Đường</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Bạo lực học đường là hành vi gây tổn hại về thể chất hoặc tinh thần của học sinh, xảy ra trong hoặc ngoài trường học, bao gồm các hình thức sau:</p>
+            
+            <div class="violence-types">
+                <div class="violence-type">
+                    <div class="violence-icon">💢</div>
+                    <h3>Bạo lực thể chất</h3>
+                    <p>Đánh, đá, xô đẩy, gây thương tích, cố ý làm tổn hại sức khỏe người khác</p>
+                </div>
+                <div class="violence-type">
+                    <div class="violence-icon">🗣️</div>
+                    <h3>Bạo lực ngôn ngữ</h3>
+                    <p>Chửi bới, đe dọa, bêu xấu, xúc phạm, làm nhục bằng lời nói</p>
+                </div>
+                <div class="violence-type">
+                    <div class="violence-icon">🧠</div>
+                    <h3>Bạo lực tinh thần</h3>
+                    <p>Chế giễu, bắt nạt, tẩy chay, cô lập, gây áp lực tâm lý</p>
+                </div>
+                <div class="violence-type">
+                    <div class="violence-icon">💻</div>
+                    <h3>Bạo lực mạng</h3>
+                    <p>Cyberbullying, bôi nhọ danh dự trên mạng xã hội, phát tán thông tin sai sự thật</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="causes" class="causes">
+    <section id="causes" class="section section-gray">
         <div class="container">
-            <h2>Nguyên Nhân Dẫn Đến Bạo Lực Học Đường</h2>
-            <div class="causes-grid">
-                <div class="cause-card">
-                    <div class="icon"><i class="fas fa-home"></i></div>
-                    <h3>Nguyên nhân từ gia đình</h3>
+            <h2 class="section-title">Nguyên Nhân Dẫn Đến Bạo Lực Học Đường</h2>
+            
+            <div class="causes-list">
+                <div class="cause-item">
+                    <h3>1. Nguyên nhân từ gia đình</h3>
                     <ul>
-                        <li>Thiếu sự quan tâm của cha mẹ</li>
-                        <li>Bạo lực gia đình</li>
-                        <li>Giáo dục không đúng cách</li>
-                        <li>Áp lực thành tích</li>
+                        <li>Thiếu sự quan tâm, giáo dục từ cha mẹ</li>
+                        <li>Môi trường gia đình có bạo lực, xung đột thường xuyên</li>
+                        <li>Phương pháp giáo dục không phù hợp (quá nghiêm khắc hoặc quá buông lỏng)</li>
+                        <li>Áp lực thành tích từ gia đình khiến trẻ căng thẳng</li>
+                        <li>Thiếu kỹ năng làm cha mẹ trong việc giáo dục con cái</li>
                     </ul>
                 </div>
-                <div class="cause-card">
-                    <div class="icon"><i class="fas fa-school"></i></div>
-                    <h3>Nguyên nhân từ nhà trường</h3>
+                
+                <div class="cause-item">
+                    <h3>2. Nguyên nhân từ nhà trường</h3>
                     <ul>
-                        <li>Quản lý lỏng lẻo</li>
-                        <li>Thiếu hoạt động giáo dục kỹ năng</li>
-                        <li>Không phát hiện kịp thời</li>
-                        <li>Xử lý chưa nghiêm minh</li>
+                        <li>Quản lý học sinh chưa chặt chẽ, thiếu biện pháp phòng ngừa</li>
+                        <li>Thiếu các chương trình giáo dục kỹ năng sống, giải quyết mâu thuẫn</li>
+                        <li>Không phát hiện và xử lý kịp thời các mâu thuẫn nhỏ trước khi trở thành bạo lực</li>
+                        <li>Áp lực học tập, thi cử quá lớn gây căng thẳng cho học sinh</li>
+                        <li>Thiếu sự phối hợp giữa giáo viên và phụ huynh trong quản lý học sinh</li>
                     </ul>
                 </div>
-                <div class="cause-card">
-                    <div class="icon"><i class="fas fa-user"></i></div>
-                    <h3>Nguyên nhân từ cá nhân</h3>
+                
+                <div class="cause-item">
+                    <h3>3. Nguyên nhân từ cá nhân</h3>
                     <ul>
-                        <li>Thiếu kỹ năng giải quyết mâu thuẫn</li>
-                        <li>Ảnh hưởng từ phim ảnh, game bạo lực</li>
-                        <li>Muốn thể hiện bản thân</li>
-                        <li>Thiếu kiểm soát cảm xúc</li>
+                        <li>Thiếu kỹ năng kiểm soát cảm xúc, giải quyết mâu thuẫn</li>
+                        <li>Ảnh hưởng từ phim ảnh, trò chơi bạo lực</li>
+                        <li>Muốn thể hiện bản thân, khẳng định vị thế trong nhóm</li>
+                        <li>Thiếu sự đồng cảm, không hiểu được hậu quả hành vi của mình</li>
+                        <li>Có tiền sử bị bạo lực hoặc chứng kiến bạo lực thường xuyên</li>
                     </ul>
                 </div>
-                <div class="cause-card">
-                    <div class="icon"><i class="fas fa-globe"></i></div>
-                    <h3>Nguyên nhân xã hội</h3>
+                
+                <div class="cause-item">
+                    <h3>4. Nguyên nhân từ xã hội</h3>
                     <ul>
-                        <li>Ảnh hưởng văn hóa bạo lực</li>
-                        <li>Áp lực cuộc sống</li>
-                        <li>Sự phát triển của mạng xã hội</li>
-                        <li>Khoảng cách giàu nghèo</li>
+                        <li>Ảnh hưởng của văn hóa bạo lực trong truyền thông, internet</li>
+                        <li>Sự phát triển quá nhanh của mạng xã hội thiếu kiểm soát</li>
+                        <li>Khoảng cách giàu nghèo, phân biệt đối xử trong xã hội</li>
+                        <li>Áp lực cuộc sống khiến phụ huynh ít thời gian quan tâm con cái</li>
+                        <li>Thiếu các chương trình tư vấn tâm lý học đường hiệu quả</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="effects" class="effects">
+    <section id="effects" class="section section-white">
         <div class="container">
-            <h2>Hậu Quả Của Bạo Lực Học Đường</h2>
-            <div class="effects-content">
-                <div class="effects-image">
-                    <img src="effects.jpg" alt="Hậu quả bạo lực học đường">
+            <h2 class="section-title">Hậu Quả Của Bạo Lực Học Đường</h2>
+            
+            <div class="effects-grid">
+                <div class="effect-card">
+                    <h3>Đối với nạn nhân</h3>
+                    <ul>
+                        <li>Tổn thương tâm lý nghiêm trọng: trầm cảm, lo âu, rối loạn stress sau sang chấn</li>
+                        <li>Suy giảm lòng tự trọng và tự tin, cảm giác bất an, sợ hãi kéo dài</li>
+                        <li>Giảm sút kết quả học tập, mất hứng thú với việc đến trường</li>
+                        <li>Rối loạn giấc ngủ, ăn uống, có thể dẫn đến các bệnh lý cơ thể</li>
+                        <li>Nguy cơ tự làm hại bản thân hoặc tự tử trong trường hợp nặng</li>
+                    </ul>
                 </div>
-                <div class="effects-text">
-                    <div class="effect-item">
-                        <i class="fas fa-heart-broken"></i>
-                        <div>
-                            <h3>Với nạn nhân</h3>
-                            <p>Tổn thương tâm lý, trầm cảm, lo âu, giảm tự tin, suy giảm học lực, thậm chí tự tử</p>
-                        </div>
-                    </div>
-                    <div class="effect-item">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <div>
-                            <h3>Với người gây bạo lực</h3>
-                            <p>Hình thành nhân cách lệch lạc, khó hòa nhập, nguy cơ phạm tội khi trưởng thành</p>
-                        </div>
-                    </div>
-                    <div class="effect-item">
-                        <i class="fas fa-users"></i>
-                        <div>
-                            <h3>Với nhà trường</h3>
-                            <p>Môi trường giáo dục không an toàn, ảnh hưởng chất lượng dạy và học</p>
-                        </div>
-                    </div>
-                    <div class="effect-item">
-                        <i class="fas fa-globe-asia"></i>
-                        <div>
-                            <h3>Với xã hội</h3>
-                            <p>Tăng gánh nặng y tế, phúc lợi xã hội, suy giảm chất lượng nguồn nhân lực</p>
-                        </div>
-                    </div>
+                
+                <div class="effect-card">
+                    <h3>Đối với người gây bạo lực</h3>
+                    <ul>
+                        <li>Hình thành nhân cách lệch lạc, coi bạo lực là cách giải quyết vấn đề</li>
+                        <li>Khó khăn trong việc thiết lập các mối quan hệ lành mạnh sau này</li>
+                        <li>Nguy cơ cao trở thành tội phạm khi trưởng thành</li>
+                        <li>Khó hòa nhập xã hội, thường xuyên gặp rắc rối với pháp luật</li>
+                        <li>Bị xã hội kỳ thị, đánh mất nhiều cơ hội trong tương lai</li>
+                    </ul>
+                </div>
+                
+                <div class="effect-card">
+                    <h3>Đối với nhà trường</h3>
+                    <ul>
+                        <li>Môi trường giáo dục trở nên không an toàn, căng thẳng</li>
+                        <li>Ảnh hưởng đến chất lượng dạy và học của toàn trường</li>
+                        <li>Uy tín nhà trường bị giảm sút, mất lòng tin từ phụ huynh</li>
+                        <li>Tăng áp lực lên giáo viên trong công tác quản lý học sinh</li>
+                        <li>Nguy cơ bị xử lý hành chính nếu không có biện pháp phòng ngừa hiệu quả</li>
+                    </ul>
+                </div>
+                
+                <div class="effect-card">
+                    <h3>Đối với xã hội</h3>
+                    <ul>
+                        <li>Tăng gánh nặng cho hệ thống y tế, phúc lợi xã hội</li>
+                        <li>Suy giảm chất lượng nguồn nhân lực tương lai</li>
+                        <li>Làm xói mòn các giá trị đạo đức, văn hóa truyền thống</li>
+                        <li>Tăng chi phí cho các chương trình can thiệp, phòng ngừa</li>
+                        <li>Hình ảnh giáo dục quốc gia bị ảnh hưởng tiêu cực</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="prevention" class="prevention">
+    <section id="prevention" class="section section-gray">
         <div class="container">
-            <h2>Cách Phòng Tránh Bạo Lực Học Đường</h2>
+            <h2 class="section-title">Biện Pháp Phòng Tránh Bạo Lực Học Đường</h2>
+            
             <div class="prevention-steps">
                 <div class="step">
                     <div class="step-number">1</div>
                     <div class="step-content">
-                        <h3>Giáo dục kỹ năng sống</h3>
-                        <p>Trang bị cho học sinh kỹ năng giao tiếp, giải quyết mâu thuẫn, kiểm soát cảm xúc</p>
+                        <h3>Giáo dục kỹ năng sống toàn diện</h3>
+                        <p>Tổ chức các chương trình giáo dục kỹ năng giao tiếp, giải quyết mâu thuẫn, kiểm soát cảm xúc, tư duy phản biện cho học sinh. Lồng ghép nội dung này vào chương trình chính khóa.</p>
                     </div>
                 </div>
+                
                 <div class="step">
                     <div class="step-number">2</div>
                     <div class="step-content">
-                        <h3>Tăng cường giám sát</h3>
-                        <p>Nhà trường cần quản lý chặt chẽ các khu vực dễ xảy ra bạo lực như nhà vệ sinh, hành lang</p>
+                        <h3>Tăng cường giám sát và quản lý</h3>
+                        <p>Bố trí giáo viên trực tại các khu vực dễ xảy ra bạo lực như nhà vệ sinh, hành lang, sân trường. Lắp đặt hệ thống camera giám sát tại các điểm nóng.</p>
                     </div>
                 </div>
+                
                 <div class="step">
                     <div class="step-number">3</div>
                     <div class="step-content">
-                        <h3>Xây dựng môi trường tích cực</h3>
-                        <p>Tổ chức các hoạt động ngoại khóa, câu lạc bộ để học sinh giao lưu lành mạnh</p>
+                        <h3>Xây dựng môi trường học tập tích cực</h3>
+                        <p>Tổ chức các hoạt động ngoại khóa, câu lạc bộ theo sở thích để học sinh có cơ hội giao lưu lành mạnh. Khuyến khích tinh thần tương trợ, chia sẻ giữa các học sinh.</p>
                     </div>
                 </div>
+                
                 <div class="step">
                     <div class="step-number">4</div>
                     <div class="step-content">
-                        <h3>Phối hợp gia đình - nhà trường</h3>
-                        <p>Thường xuyên trao đổi thông tin về tình hình học tập, sinh hoạt của học sinh</p>
+                        <h3>Tăng cường phối hợp gia đình - nhà trường</h3>
+                        <p>Tổ chức các buổi họp phụ huynh định kỳ, trao đổi thông tin hai chiều về tình hình học tập, sinh hoạt của học sinh. Cung cấp kiến thức về giáo dục con cái cho phụ huynh.</p>
                     </div>
                 </div>
+                
                 <div class="step">
                     <div class="step-number">5</div>
                     <div class="step-content">
-                        <h3>Xử lý nghiêm minh</h3>
-                        <p>Có biện pháp xử lý kịp thời, công bằng khi xảy ra bạo lực để răn đe</p>
+                        <h3>Xử lý nghiêm minh các vụ việc</h3>
+                        <p>Xây dựng quy trình xử lý bạo lực học đường rõ ràng, công khai. Áp dụng các biện pháp kỷ luật nghiêm khắc nhưng mang tính giáo dục đối với học sinh vi phạm.</p>
                     </div>
                 </div>
+                
                 <div class="step">
                     <div class="step-number">6</div>
                     <div class="step-content">
-                        <h3>Tư vấn tâm lý học đường</h3>
-                        <p>Thành lập phòng tư vấn tâm lý để hỗ trợ học sinh gặp khó khăn</p>
+                        <h3>Phát triển hệ thống tư vấn tâm lý học đường</h3>
+                        <p>Thành lập phòng tư vấn tâm lý với đội ngũ chuyên môn đủ năng lực. Tổ chức các buổi tư vấn cá nhân và nhóm cho học sinh có nguy cơ hoặc đã từng bị bạo lực.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="support" class="support">
+    <footer style="background-color: #2c3e50; color: white; padding: 30px 0; text-align: center;">
         <div class="container">
-            <h2>Bạn Cần Giúp Đỡ?</h2>
-            <div class="support-content">
-                <div class="support-info">
-                    <h3>Đường dây nóng hỗ trợ</h3>
-                    <div class="hotline">
-                        <i class="fas fa-phone"></i>
-                        <span>111 - Tổng đài Quốc gia Bảo vệ Trẻ em</span>
-                    </div>
-                    <div class="hotline">
-                        <i class="fas fa-phone"></i>
-                        <span>1800 1567 - Đường dây nóng Bộ Giáo dục</span>
-                    </div>
-                    <div class="hotline">
-                        <i class="fas fa-phone"></i>
-                        <span>1800 6166 - Ngôi nhà Ánh Dương</span>
-                    </div>
-                    
-                    <h3>Các bước cần làm khi bị bạo lực</h3>
-                    <ol>
-                        <li>Bình tĩnh, không phản ứng tiêu cực</li>
-                        <li>Tìm người lớn đáng tin cậy để chia sẻ</li>
-                        <li>Ghi lại bằng chứng (nếu có thể)</li>
-                        <li>Báo cáo với nhà trường hoặc cơ quan chức năng</li>
-                        <li>Tìm kiếm hỗ trợ tâm lý nếu cần</li>
-                    </ol>
-                </div>
-                <div class="support-form">
-                    <h3>Gửi thông tin cần hỗ trợ</h3>
-                    <form id="helpForm">
-                        <div class="form-group">
-                            <label for="name">Họ và tên</label>
-                            <input type="text" id="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email/SĐT</label>
-                            <input type="text" id="contact" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="issue">Vấn đề bạn gặp phải</label>
-                            <select id="issue">
-                                <option value="victim">Tôi là nạn nhân</option>
-                                <option value="witness">Tôi chứng kiến vụ việc</option>
-                                <option value="other">Vấn đề khác</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Nội dung</label>
-                            <textarea id="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Gửi yêu cầu</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo-white.png" alt="Logo">
-                    <p>Chung tay xây dựng môi trường học tập an toàn, thân thiện</p>
-                </div>
-                <div class="footer-links">
-                    <h3>Liên kết nhanh</h3>
-                    <ul>
-                        <li><a href="#home">Trang chủ</a></li>
-                        <li><a href="#definition">Khái niệm</a></li>
-                        <li><a href="#causes">Nguyên nhân</a></li>
-                        <li><a href="#prevention">Phòng tránh</a></li>
-                    </ul>
-                </div>
-                <div class="footer-resources">
-                    <h3>Tài nguyên</h3>
-                    <ul>
-                        <li><a href="#">Tài liệu giáo dục</a></li>
-                        <li><a href="#">Video hướng dẫn</a></li>
-                        <li><a href="#">Tài liệu cho phụ huynh</a></li>
-                        <li><a href="#">Nghiên cứu về BLHĐ</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 Chung Tay Đẩy Lùi Bạo Lực Học Đường. All Rights Reserved.</p>
-            </div>
+            <p>© 2023 Chung Tay Đẩy Lùi Bạo Lực Học Đường</p>
+            <p>Mọi hành vi bạo lực học đường cần được báo cáo và xử lý kịp thời</p>
         </div>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
