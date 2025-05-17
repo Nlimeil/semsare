@@ -1,208 +1,293 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Phòng Chống Bạo Lực Học Đường</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: linear-gradient(to right, #e0f7fa, #ffffff);
-      color: #333;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(90deg, #0288d1, #26c6da);
-      color: white;
-      padding: 40px 20px;
-      text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    }
-
-    header h1 {
-      font-size: 2.8rem;
-    }
-
-    nav {
-      margin-top: 15px;
-    }
-
-    nav a {
-      color: #fff;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
-      padding: 8px 16px;
-      border-radius: 5px;
-      transition: background 0.3s;
-    }
-
-    nav a:hover {
-      background: rgba(255,255,255,0.2);
-    }
-
-    main {
-      max-width: 1100px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-
-    section {
-      background: #fff;
-      border-radius: 12px;
-      padding: 30px;
-      margin-bottom: 30px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease;
-    }
-
-    section:hover {
-      transform: translateY(-5px);
-    }
-
-    h2 {
-      color: #0288d1;
-      border-bottom: 2px solid #b2ebf2;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    h3 {
-      color: #00796b;
-      margin-top: 20px;
-    }
-
-    ul {
-      padding-left: 20px;
-    }
-
-    ul li {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      text-align: center;
-      background: #0288d1;
-      color: white;
-      padding: 20px;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
-      }
-      nav {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chung Tay Đẩy Lùi Bạo Lực Học Đường</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo phòng chống bạo lực học đường">
+                <h1>Chung Tay Đẩy Lùi Bạo Lực Học Đường</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#about">Về bạo lực học đường</a></li>
+                    <li><a href="#prevention">Phòng ngừa</a></li>
+                    <li><a href="#support">Hỗ trợ</a></li>
+                    <li><a href="#stories">Câu chuyện</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
-  <header>
-    <h1>Phòng Chống Bạo Lực Học Đường</h1>
-    <nav>
-      <a href="#gioithieu">Giới thiệu</a>
-      <a href="#nguyennhan">Nguyên nhân</a>
-      <a href="#giaiphap">Giải pháp</a>
-      <a href="#lienhe">Liên hệ</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="gioithieu">
-      <h2>Giới thiệu</h2>
-      <p>Bạo lực học đường là hiện tượng xảy ra trong môi trường giáo dục, khi học sinh bị đe dọa, xúc phạm, đánh đập hoặc bị cô lập. Đây là vấn đề nghiêm trọng ảnh hưởng đến sức khỏe tinh thần, thể chất và kết quả học tập. Website này cung cấp thông tin nhằm nâng cao nhận thức, phòng ngừa và can thiệp hiệu quả.</p>
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>HÃY LÊN TIẾNG VÌ MỘT MÔI TRƯỜNG HỌC TẬP AN TOÀN</h2>
+                <p>Bạo lực học đường không phải là giải pháp. Cùng nhau xây dựng môi trường học tập thân thiện, lành mạnh.</p>
+                <a href="#support" class="btn">Cần giúp đỡ?</a>
+            </div>
+        </div>
     </section>
 
-    <section id="nguyennhan">
-      <h2>Nguyên nhân & Hậu quả</h2>
-
-      <h3>Nguyên nhân</h3>
-      <ul>
-        <li>Thiếu sự quan tâm từ gia đình, cha mẹ quá bận rộn hoặc sử dụng bạo lực trong dạy con.</li>
-        <li>Ảnh hưởng tiêu cực từ mạng xã hội, trò chơi bạo lực, phim ảnh không phù hợp.</li>
-        <li>Thiếu kỹ năng giao tiếp, giải quyết xung đột, kiềm chế cảm xúc ở học sinh.</li>
-        <li>Áp lực học tập, ganh đua khiến học sinh dễ căng thẳng và phản ứng tiêu cực.</li>
-        <li>Môi trường học tập thiếu thân thiện, giáo viên chưa được trang bị đầy đủ kiến thức về tâm lý học sinh.</li>
-      </ul>
-
-      <h3>Hậu quả</h3>
-      <h4>Đối với nạn nhân</h4>
-      <ul>
-        <li>Tổn thương tâm lý nghiêm trọng: lo âu, trầm cảm, sợ hãi đến trường, thậm chí tự tử.</li>
-        <li>Suy giảm kết quả học tập, mất tự tin, sống thu mình.</li>
-        <li>Rối loạn tâm lý lâu dài nếu không được hỗ trợ.</li>
-      </ul>
-      <h4>Đối với học sinh gây bạo lực</h4>
-      <ul>
-        <li>Hình thành thói quen xấu, dễ tái phạm và lệch hướng đạo đức.</li>
-        <li>Gặp rắc rối với pháp luật khi hành vi trở nên nghiêm trọng.</li>
-        <li>Bị xa lánh, không được bạn bè, thầy cô tin tưởng.</li>
-      </ul>
-      <h4>Đối với nhà trường và xã hội</h4>
-      <ul>
-        <li>Môi trường học thiếu an toàn, học sinh mất niềm tin vào giáo dục.</li>
-        <li>Gia tăng tỉ lệ bỏ học, tội phạm vị thành niên.</li>
-        <li>Gánh nặng xã hội khi nhiều người trẻ bị ảnh hưởng tâm lý lâu dài.</li>
-      </ul>
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Bạo Lực Học Đường Là Gì?</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Bạo lực học đường là hành vi gây tổn hại về thể chất hoặc tinh thần của học sinh, xảy ra trong hoặc ngoài trường học. Nó có thể bao gồm:</p>
+                    <ul>
+                        <li><i class="fas fa-times-circle"></i> Bạo lực thể chất (đánh, đá, xô đẩy...)</li>
+                        <li><i class="fas fa-times-circle"></i> Bạo lực tinh thần (chế giễu, bắt nạt, tẩy chay...)</li>
+                        <li><i class="fas fa-times-circle"></i> Bạo lực ngôn ngữ (chửi bới, đe dọa, bêu xấu...)</li>
+                        <li><i class="fas fa-times-circle"></i> Bạo lực trên mạng (cyberbullying)</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="bullying.jpg" alt="Hình ảnh về bạo lực học đường">
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="giaiphap">
-      <h2>Giải pháp phòng chống bạo lực học đường</h2>
-
-      <h4>🔹 1. Đối với học sinh</h4>
-      <ul>
-        <li>Được học các kỹ năng sống: giao tiếp, lắng nghe, giải quyết xung đột, kiểm soát cảm xúc.</li>
-        <li>Được khuyến khích chia sẻ, phản ánh các vấn đề với giáo viên, cha mẹ, chuyên gia tâm lý.</li>
-        <li>Tham gia các hoạt động đội nhóm để xây dựng tinh thần đoàn kết, hỗ trợ lẫn nhau.</li>
-      </ul>
-
-      <h4>🔹 2. Đối với gia đình</h4>
-      <ul>
-        <li>Nuôi dạy con bằng tình thương, không dùng đòn roi.</li>
-        <li>Lắng nghe, đồng hành với con, quan sát các thay đổi bất thường về tâm lý.</li>
-        <li>Làm gương trong ứng xử, dạy con cách kiên nhẫn, thấu hiểu.</li>
-      </ul>
-
-      <h4>🔹 3. Đối với nhà trường</h4>
-      <ul>
-        <li>Xây dựng quy tắc ứng xử học đường rõ ràng và thực thi nghiêm túc.</li>
-        <li>Đào tạo giáo viên về nhận biết và xử lý bạo lực học đường.</li>
-        <li>Thiết lập đường dây nóng, hộp thư góp ý, phòng tham vấn học đường.</li>
-      </ul>
-
-      <h4>🔹 4. Đối với xã hội và cơ quan chức năng</h4>
-      <ul>
-        <li>Tổ chức chiến dịch truyền thông nâng cao nhận thức cộng đồng.</li>
-        <li>Xây dựng chính sách xử lý rõ ràng, nghiêm minh các hành vi bạo lực.</li>
-        <li>Phối hợp liên ngành giữa giáo dục, y tế, công an, đoàn thể trong việc can thiệp và phòng ngừa.</li>
-      </ul>
+    <section class="statistics">
+        <div class="container">
+            <h2>Con Số Đáng Báo Động</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-count="60">0</div>
+                    <div class="stat-text">% học sinh từng chứng kiến bạo lực học đường</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="25">0</div>
+                    <div class="stat-text">% học sinh từng là nạn nhân của bạo lực</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="70">0</div>
+                    <div class="stat-text">% vụ bạo lực không được báo cáo</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-count="40">0</div>
+                    <div class="stat-text">% nạn nhân bị ảnh hưởng tâm lý lâu dài</div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="lienhe">
-      <h2>Liên hệ hỗ trợ</h2>
-      <p>Nếu bạn hoặc người thân là nạn nhân của bạo lực học đường, đừng im lặng. Hãy liên hệ để được hỗ trợ:</p>
-      <p><strong>Email:</strong> hotro@baoluchocduong.vn</p>
-      <p><strong>Điện thoại:</strong> 1800 123 456</p>
-      <p><strong>Zalo hỗ trợ:</strong> @chongbaoluchocduong</p>
+    <section id="prevention" class="prevention">
+        <div class="container">
+            <h2>Cách Phòng Ngừa Bạo Lực Học Đường</h2>
+            <div class="prevention-grid">
+                <div class="prevention-card">
+                    <div class="icon"><i class="fas fa-users"></i></div>
+                    <h3>Đối với học sinh</h3>
+                    <ul>
+                        <li>Tôn trọng bạn bè, không phân biệt đối xử</li>
+                        <li>Lên tiếng khi thấy hành vi bạo lực</li>
+                        <li>Tìm kiếm sự giúp đỡ khi cần thiết</li>
+                        <li>Không tham gia hoặc cổ vũ bạo lực</li>
+                    </ul>
+                </div>
+                <div class="prevention-card">
+                    <div class="icon"><i class="fas fa-user-graduate"></i></div>
+                    <h3>Đối với giáo viên</h3>
+                    <ul>
+                        <li>Quan sát và phát hiện sớm các dấu hiệu</li>
+                        <li>Tạo môi trường lớp học thân thiện</li>
+                        <li>Xử lý kịp thời khi có sự việc xảy ra</li>
+                        <li>Giáo dục kỹ năng sống cho học sinh</li>
+                    </ul>
+                </div>
+                <div class="prevention-card">
+                    <div class="icon"><i class="fas fa-home"></i></div>
+                    <h3>Đối với phụ huynh</h3>
+                    <ul>
+                        <li>Quan tâm, lắng nghe con em mình</li>
+                        <li>Dạy trẻ cách giải quyết mâu thuẫn</li>
+                        <li>Phối hợp với nhà trường khi cần thiết</li>
+                        <li>Làm gương trong cách ứng xử</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </section>
-  </main>
 
-  <footer>
-    &copy; 2025 – Chung tay xây dựng môi trường học đường an toàn, thân thiện và không bạo lực.
-  </footer>
+    <section id="support" class="support">
+        <div class="container">
+            <h2>Bạn Cần Giúp Đỡ?</h2>
+            <div class="support-content">
+                <div class="support-info">
+                    <h3>Đường dây nóng hỗ trợ</h3>
+                    <div class="hotline">
+                        <i class="fas fa-phone"></i>
+                        <span>111 - Tổng đài Quốc gia Bảo vệ Trẻ em</span>
+                    </div>
+                    <div class="hotline">
+                        <i class="fas fa-phone"></i>
+                        <span>1800 1567 - Đường dây nóng Bộ Giáo dục</span>
+                    </div>
+                    <div class="hotline">
+                        <i class="fas fa-phone"></i>
+                        <span>1800 6166 - Ngôi nhà Ánh Dương</span>
+                    </div>
+                    
+                    <h3>Các bước cần làm khi bị bạo lực</h3>
+                    <ol>
+                        <li>Bình tĩnh, không phản ứng tiêu cực</li>
+                        <li>Tìm người lớn đáng tin cậy để chia sẻ</li>
+                        <li>Ghi lại bằng chứng (nếu có thể)</li>
+                        <li>Báo cáo với nhà trường hoặc cơ quan chức năng</li>
+                        <li>Tìm kiếm hỗ trợ tâm lý nếu cần</li>
+                    </ol>
+                </div>
+                <div class="support-form">
+                    <h3>Gửi thông tin cần hỗ trợ</h3>
+                    <form id="helpForm">
+                        <div class="form-group">
+                            <label for="name">Họ và tên</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email/SĐT</label>
+                            <input type="text" id="contact" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="issue">Vấn đề bạn gặp phải</label>
+                            <select id="issue">
+                                <option value="victim">Tôi là nạn nhân</option>
+                                <option value="witness">Tôi chứng kiến vụ việc</option>
+                                <option value="other">Vấn đề khác</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Nội dung</label>
+                            <textarea id="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Gửi yêu cầu</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="stories" class="stories">
+        <div class="container">
+            <h2>Câu Chuyện Thực Tế</h2>
+            <div class="story-carousel">
+                <div class="story active">
+                    <div class="story-content">
+                        <p>"Tôi từng bị bắt nạt suốt 2 năm cấp 2 vì ngoại hình. Nhờ có cô giáo chủ nhiệm phát hiện và giúp đỡ, tôi đã vượt qua được giai đoạn khó khăn đó."</p>
+                        <div class="author">- Minh Anh, 16 tuổi -</div>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="story-content">
+                        <p>"Là giáo viên, tôi nhận ra rằng nhiều học sinh gây bạo lực thực chất cũng có những vấn đề riêng. Giải quyết từ gốc rễ là cách tốt nhất để ngăn chặn bạo lực."</p>
+                        <div class="author">- Thầy Nguyễn Văn Bình, GVCN -</div>
+                    </div>
+                </div>
+                <div class="story">
+                    <div class="story-content">
+                        <p>"Con tôi từng là người gây bạo lực. Sau khi nhà trường can thiệp và chúng tôi hợp tác giáo dục, cháu đã thay đổi tích cực. Phụ huynh cần dành thời gian cho con nhiều hơn."</p>
+                        <div class="author">- Chị Hương, phụ huynh -</div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="pledge">
+        <div class="container">
+            <h2>Cam Kết Không Bạo Lực</h2>
+            <div class="pledge-content">
+                <p>Tôi cam kết:</p>
+                <ul>
+                    <li><input type="checkbox" id="pledge1"> <label for="pledge1">Không tham gia vào bất kỳ hình thức bạo lực nào</label></li>
+                    <li><input type="checkbox" id="pledge2"> <label for="pledge2">Lên tiếng khi chứng kiến bạo lực</label></li>
+                    <li><input type="checkbox" id="pledge3"> <label for="pledge3">Tôn trọng sự khác biệt của mọi người</label></li>
+                    <li><input type="checkbox" id="pledge4"> <label for="pledge4">Giải quyết mâu thuẫn bằng đối thoại</label></li>
+                </ul>
+                <button id="pledgeBtn" class="btn">Tôi Cam Kết</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Liên Hệ Với Chúng Tôi</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Thông tin liên hệ</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Số 123, đường ABC, quận XYZ, TP. Hà Nội</p>
+                    <p><i class="fas fa-phone"></i> (024) 1234 5678</p>
+                    <p><i class="fas fa-envelope"></i> baoluchocduong@edu.vn</p>
+                    
+                    <h3>Kết nối với chúng tôi</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0966092835135!2d105.78010841488372!3d21.02882078599838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab4b00000000%3A0x1!2zMjHCsDAxJzQzLjgiTiAxMDXCsDQ2JzUyLjkiRQ!5e0!3m2!1svi!2s!4v1620000000000!5m2!1svi!2s" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo-white.png" alt="Logo">
+                    <p>Chung tay xây dựng môi trường học tập an toàn, thân thiện</p>
+                </div>
+                <div class="footer-links">
+                    <h3>Liên kết nhanh</h3>
+                    <ul>
+                        <li><a href="#home">Trang chủ</a></li>
+                        <li><a href="#about">Về bạo lực học đường</a></li>
+                        <li><a href="#prevention">Phòng ngừa</a></li>
+                        <li><a href="#support">Hỗ trợ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-resources">
+                    <h3>Tài nguyên</h3>
+                    <ul>
+                        <li><a href="#">Tài liệu giáo dục</a></li>
+                        <li><a href="#">Video hướng dẫn</a></li>
+                        <li><a href="#">Tài liệu cho phụ huynh</a></li>
+                        <li><a href="#">Nghiên cứu về BLHĐ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Chung Tay Đẩy Lùi Bạo Lực Học Đường. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
