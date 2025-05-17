@@ -24,4 +24,185 @@
       color: white;
       padding: 40px 20px;
       text-align: center;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.2)
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin: 0 12px;
+      font-weight: bold;
+      padding: 8px 16px;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    section {
+      background: #fff;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    section:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      color: #0288d1;
+      border-bottom: 2px solid #b2ebf2;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+
+    h3 {
+      color: #00796b;
+      margin-top: 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      text-align: center;
+      background: #0288d1;
+      color: white;
+      padding: 20px;
+      font-size: 0.95rem;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Phòng Chống Bạo Lực Học Đường</h1>
+    <nav>
+      <a href="#gioithieu">Giới thiệu</a>
+      <a href="#nguyennhan">Nguyên nhân</a>
+      <a href="#giaiphap">Giải pháp</a>
+      <a href="#lienhe">Liên hệ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="gioithieu">
+      <h2>Giới thiệu</h2>
+      <p>Bạo lực học đường là hiện tượng xảy ra trong môi trường giáo dục, khi học sinh bị đe dọa, xúc phạm, đánh đập hoặc bị cô lập. Đây là vấn đề nghiêm trọng ảnh hưởng đến sức khỏe tinh thần, thể chất và kết quả học tập. Website này cung cấp thông tin nhằm nâng cao nhận thức, phòng ngừa và can thiệp hiệu quả.</p>
+    </section>
+
+    <section id="nguyennhan">
+      <h2>Nguyên nhân & Hậu quả</h2>
+
+      <h3>Nguyên nhân</h3>
+      <ul>
+        <li>Thiếu sự quan tâm từ gia đình, cha mẹ quá bận rộn hoặc sử dụng bạo lực trong dạy con.</li>
+        <li>Ảnh hưởng tiêu cực từ mạng xã hội, trò chơi bạo lực, phim ảnh không phù hợp.</li>
+        <li>Thiếu kỹ năng giao tiếp, giải quyết xung đột, kiềm chế cảm xúc ở học sinh.</li>
+        <li>Áp lực học tập, ganh đua khiến học sinh dễ căng thẳng và phản ứng tiêu cực.</li>
+        <li>Môi trường học tập thiếu thân thiện, giáo viên chưa được trang bị đầy đủ kiến thức về tâm lý học sinh.</li>
+      </ul>
+
+      <h3>Hậu quả</h3>
+      <h4>Đối với nạn nhân</h4>
+      <ul>
+        <li>Tổn thương tâm lý nghiêm trọng: lo âu, trầm cảm, sợ hãi đến trường, thậm chí tự tử.</li>
+        <li>Suy giảm kết quả học tập, mất tự tin, sống thu mình.</li>
+        <li>Rối loạn tâm lý lâu dài nếu không được hỗ trợ.</li>
+      </ul>
+      <h4>Đối với học sinh gây bạo lực</h4>
+      <ul>
+        <li>Hình thành thói quen xấu, dễ tái phạm và lệch hướng đạo đức.</li>
+        <li>Gặp rắc rối với pháp luật khi hành vi trở nên nghiêm trọng.</li>
+        <li>Bị xa lánh, không được bạn bè, thầy cô tin tưởng.</li>
+      </ul>
+      <h4>Đối với nhà trường và xã hội</h4>
+      <ul>
+        <li>Môi trường học thiếu an toàn, học sinh mất niềm tin vào giáo dục.</li>
+        <li>Gia tăng tỉ lệ bỏ học, tội phạm vị thành niên.</li>
+        <li>Gánh nặng xã hội khi nhiều người trẻ bị ảnh hưởng tâm lý lâu dài.</li>
+      </ul>
+    </section>
+
+    <section id="giaiphap">
+      <h2>Giải pháp phòng chống bạo lực học đường</h2>
+
+      <h4>🔹 1. Đối với học sinh</h4>
+      <ul>
+        <li>Được học các kỹ năng sống: giao tiếp, lắng nghe, giải quyết xung đột, kiểm soát cảm xúc.</li>
+        <li>Được khuyến khích chia sẻ, phản ánh các vấn đề với giáo viên, cha mẹ, chuyên gia tâm lý.</li>
+        <li>Tham gia các hoạt động đội nhóm để xây dựng tinh thần đoàn kết, hỗ trợ lẫn nhau.</li>
+      </ul>
+
+      <h4>🔹 2. Đối với gia đình</h4>
+      <ul>
+        <li>Nuôi dạy con bằng tình thương, không dùng đòn roi.</li>
+        <li>Lắng nghe, đồng hành với con, quan sát các thay đổi bất thường về tâm lý.</li>
+        <li>Làm gương trong ứng xử, dạy con cách kiên nhẫn, thấu hiểu.</li>
+      </ul>
+
+      <h4>🔹 3. Đối với nhà trường</h4>
+      <ul>
+        <li>Xây dựng quy tắc ứng xử học đường rõ ràng và thực thi nghiêm túc.</li>
+        <li>Đào tạo giáo viên về nhận biết và xử lý bạo lực học đường.</li>
+        <li>Thiết lập đường dây nóng, hộp thư góp ý, phòng tham vấn học đường.</li>
+      </ul>
+
+      <h4>🔹 4. Đối với xã hội và cơ quan chức năng</h4>
+      <ul>
+        <li>Tổ chức chiến dịch truyền thông nâng cao nhận thức cộng đồng.</li>
+        <li>Xây dựng chính sách xử lý rõ ràng, nghiêm minh các hành vi bạo lực.</li>
+        <li>Phối hợp liên ngành giữa giáo dục, y tế, công an, đoàn thể trong việc can thiệp và phòng ngừa.</li>
+      </ul>
+    </section>
+
+    <section id="lienhe">
+      <h2>Liên hệ hỗ trợ</h2>
+      <p>Nếu bạn hoặc người thân là nạn nhân của bạo lực học đường, đừng im lặng. Hãy liên hệ để được hỗ trợ:</p>
+      <p><strong>Email:</strong> hotro@baoluchocduong.vn</p>
+      <p><strong>Điện thoại:</strong> 1800 123 456</p>
+      <p><strong>Zalo hỗ trợ:</strong> @chongbaoluchocduong</p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 – Chung tay xây dựng môi trường học đường an toàn, thân thiện và không bạo lực.
+  </footer>
+
+</body>
+</html>
