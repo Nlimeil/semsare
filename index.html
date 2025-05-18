@@ -25,6 +25,7 @@
             padding: 0 15px;
         }
 
+        /* Header */
         header {
             background-color: #2c3e50;
             color: white;
@@ -80,6 +81,7 @@
             width: 100%;
         }
 
+        /* Hero section */
         .hero {
             background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080');
             background-size: cover;
@@ -118,8 +120,10 @@
             background-color: #c0392b;
         }
 
+        /* Main content sections */
         .section {
             padding: 80px 0;
+            scroll-margin-top: 80px; /* Fix anchor link scrolling */
         }
 
         .section-white {
@@ -147,6 +151,7 @@
             margin: 15px auto 0;
         }
 
+        /* Violence types */
         .violence-types {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -179,6 +184,7 @@
             color: #2c3e50;
         }
 
+        /* Footer */
         footer {
             background-color: #1a252f;
             color: white;
@@ -186,6 +192,7 @@
             text-align: center;
         }
 
+        /* Responsive design */
         @media (max-width: 768px) {
             .header-container {
                 flex-direction: column;
@@ -231,11 +238,6 @@
             .violence-types {
                 grid-template-columns: 1fr;
             }
-        }
-
-        /* Fix lỗi tiêu đề section bị che bởi header */
-        section {
-            scroll-margin-top: 100px;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -298,28 +300,95 @@
     <section id="causes" class="section section-gray">
         <div class="container">
             <h2 class="section-title">Nguyên Nhân</h2>
-            <!-- Nội dung nguyên nhân -->
+            <div class="causes-list">
+                <div class="cause-item">
+                    <h3>Các nguyên nhân chính</h3>
+                    <ul>
+                        <li>Thiếu kỹ năng giải quyết mâu thuẫn</li>
+                        <li>Ảnh hưởng từ gia đình và môi trường sống</li>
+                        <li>Áp lực học tập và thi cử</li>
+                        <li>Bắt chước hành vi bạo lực từ phim ảnh, game</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="effects" class="section section-white">
         <div class="container">
             <h2 class="section-title">Hậu Quả</h2>
-            <!-- Nội dung hậu quả -->
+            <div class="effects-grid">
+                <div class="effect-card">
+                    <h3>Đối với nạn nhân</h3>
+                    <ul>
+                        <li>Tổn thương thể chất và tinh thần</li>
+                        <li>Suy giảm kết quả học tập</li>
+                        <li>Rối loạn tâm lý, trầm cảm</li>
+                    </ul>
+                </div>
+                <div class="effect-card">
+                    <h3>Đối với nhà trường</h3>
+                    <ul>
+                        <li>Mất trật tự, an ninh học đường</li>
+                        <li>Ảnh hưởng đến chất lượng giáo dục</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="prevention" class="section section-gray">
         <div class="container">
             <h2 class="section-title">Phòng Tránh</h2>
-            <!-- Nội dung phòng tránh -->
+            <div class="prevention-steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Giáo dục nhận thức</h3>
+                        <p>Tổ chức các buổi nói chuyện, hội thảo về phòng chống bạo lực học đường</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Xây dựng môi trường thân thiện</h3>
+                        <p>Khuyến khích học sinh chia sẻ, lắng nghe và giúp đỡ lẫn nhau</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <section id="contact" class="section section-white">
         <div class="container">
-            <h2 class="section-title">Liên Hệ</h2>
-            <!-- Nội dung liên hệ -->
+            <h2 class="section-title">Liên Hệ Báo Cáo</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Đường dây nóng</h2>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-details">
+                            <h3>Điện thoại</h3>
+                            <p>1800.1567 (Miễn phí)</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>baoluchocduong@moet.gov.vn</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-steps">
+                    <h3>Cách báo cáo</h3>
+                    <ol>
+                        <li>Ghi lại thời gian, địa điểm xảy ra</li>
+                        <li>Thu thập bằng chứng (nếu có)</li>
+                        <li>Liên hệ qua các kênh hỗ trợ</li>
+                    </ol>
+                </div>
+            </div>
         </div>
     </section>
 
