@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chung Tay Đẩy Lùi Bạo Lực Học Đường</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -82,8 +81,7 @@
         }
 
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-                        url('https://via.placeholder.com/1920x1080');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080');
             background-size: cover;
             background-position: center;
             color: white;
@@ -96,6 +94,7 @@
             font-size: 2.5rem;
             margin-bottom: 20px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            line-height: 1.3;
         }
 
         .hero p {
@@ -172,6 +171,7 @@
             font-size: 3rem;
             color: #e74c3c;
             margin-bottom: 20px;
+            display: inline-block;
         }
 
         .violence-type h3 {
@@ -232,13 +232,19 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Fix lỗi tiêu đề section bị che bởi header */
+        section {
+            scroll-margin-top: 100px;
+        }
     </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header>
         <div class="container header-container">
             <div class="logo">Chung Tay Đẩy Lùi Bạo Lực Học Đường</div>
-            <nav aria-label="Điều hướng chính">
+            <nav>
                 <ul>
                     <li><a href="#home">Trang chủ</a></li>
                     <li><a href="#definition">Khái niệm</a></li>
@@ -251,74 +257,71 @@
         </div>
     </header>
 
-    <main>
-        <section id="home" class="hero" aria-label="Giới thiệu">
-            <div class="container">
-                <h1>MỘT MÔI TRƯỜNG HỌC TẬP AN TOÀN</h1>
-                <p>Bạo lực học đường không phải là giải pháp. Cùng nhau xây dựng môi trường học tập thân thiện, lành mạnh.</p>
-                <a href="#contact" class="btn">Cần giúp đỡ?</a>
-            </div>
-        </section>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>MỘT MÔI TRƯỜNG HỌC TẬP AN TOÀN</h1>
+            <p>Bạo lực học đường không phải là giải pháp. Cùng nhau xây dựng môi trường học tập thân thiện, lành mạnh.</p>
+            <a href="#contact" class="btn">Cần giúp đỡ?</a>
+        </div>
+    </section>
 
-        <section id="definition" class="section section-white" aria-label="Khái niệm bạo lực học đường">
-            <div class="container">
-                <h2 class="section-title">Khái Niệm Bạo Lực Học Đường</h2>
-                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
-                    Bạo lực học đường là hành vi gây tổn hại về thể chất hoặc tinh thần của học sinh, xảy ra trong hoặc ngoài trường học, bao gồm các hình thức sau:
-                </p>
-                <div class="violence-types">
-                    <div class="violence-type">
-                        <div class="violence-icon"><i class="fas fa-user-injured"></i></div>
-                        <h3>Bạo lực thể chất</h3>
-                        <p>Đánh, đá, xô đẩy, gây thương tích, cố ý làm tổn hại sức khỏe người khác</p>
-                    </div>
-                    <div class="violence-type">
-                        <div class="violence-icon"><i class="fas fa-comment-slash"></i></div>
-                        <h3>Bạo lực ngôn ngữ</h3>
-                        <p>Chửi bới, đe dọa, bêu xấu, xúc phạm, làm nhục bằng lời nói</p>
-                    </div>
-                    <div class="violence-type">
-                        <div class="violence-icon"><i class="fas fa-brain"></i></div>
-                        <h3>Bạo lực tinh thần</h3>
-                        <p>Chế giễu, bắt nạt, tẩy chay, cô lập, gây áp lực tâm lý</p>
-                    </div>
-                    <div class="violence-type">
-                        <div class="violence-icon"><i class="fas fa-laptop"></i></div>
-                        <h3>Bạo lực mạng</h3>
-                        <p>Cyberbullying, bôi nhọ danh dự trên mạng xã hội, phát tán thông tin sai sự thật</p>
-                    </div>
+    <section id="definition" class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Khái Niệm Bạo Lực Học Đường</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Bạo lực học đường là hành vi gây tổn hại về thể chất hoặc tinh thần của học sinh, xảy ra trong hoặc ngoài trường học, bao gồm các hình thức sau:</p>
+            
+            <div class="violence-types">
+                <div class="violence-type">
+                    <div class="violence-icon"><i class="fas fa-user-injured"></i></div>
+                    <h3>Bạo lực thể chất</h3>
+                    <p>Đánh, đá, xô đẩy, gây thương tích, cố ý làm tổn hại sức khỏe người khác</p>
+                </div>
+                <div class="violence-type">
+                    <div class="violence-icon"><i class="fas fa-comment-slash"></i></div>
+                    <h3>Bạo lực ngôn ngữ</h3>
+                    <p>Chửi bới, đe dọa, bêu xấu, xúc phạm, làm nhục bằng lời nói</p>
+                </div>
+                <div class="violence-type">
+                    <div class="violence-icon"><i class="fas fa-brain"></i></div>
+                    <h3>Bạo lực tinh thần</h3>
+                    <p>Chế giễu, bắt nạt, tẩy chay, cô lập, gây áp lực tâm lý</p>
+                </div>
+                <div class="violence-type">
+                    <div class="violence-icon"><i class="fas fa-laptop"></i></div>
+                    <h3>Bạo lực mạng</h3>
+                    <p>Cyberbullying, bôi nhọ danh dự trên mạng xã hội, phát tán thông tin sai sự thật</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="causes" class="section section-gray" aria-label="Nguyên nhân bạo lực học đường">
-            <div class="container">
-                <h2 class="section-title">Nguyên Nhân</h2>
-                <!-- TODO: Thêm nội dung nguyên nhân -->
-            </div>
-        </section>
+    <section id="causes" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Nguyên Nhân</h2>
+            <!-- Nội dung nguyên nhân -->
+        </div>
+    </section>
 
-        <section id="effects" class="section section-white" aria-label="Hậu quả của bạo lực học đường">
-            <div class="container">
-                <h2 class="section-title">Hậu Quả</h2>
-                <!-- TODO: Thêm nội dung hậu quả -->
-            </div>
-        </section>
+    <section id="effects" class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Hậu Quả</h2>
+            <!-- Nội dung hậu quả -->
+        </div>
+    </section>
 
-        <section id="prevention" class="section section-gray" aria-label="Phòng tránh bạo lực học đường">
-            <div class="container">
-                <h2 class="section-title">Phòng Tránh</h2>
-                <!-- TODO: Thêm nội dung phòng tránh -->
-            </div>
-        </section>
+    <section id="prevention" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Phòng Tránh</h2>
+            <!-- Nội dung phòng tránh -->
+        </div>
+    </section>
 
-        <section id="contact" class="section section-white" aria-label="Liên hệ hỗ trợ">
-            <div class="container">
-                <h2 class="section-title">Liên Hệ</h2>
-                <!-- TODO: Thêm biểu mẫu hoặc thông tin liên hệ -->
-            </div>
-        </section>
-    </main>
+    <section id="contact" class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Liên Hệ</h2>
+            <!-- Nội dung liên hệ -->
+        </div>
+    </section>
 
     <footer>
         <div class="container">
