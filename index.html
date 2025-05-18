@@ -83,7 +83,7 @@
         
         /* Hero section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('school.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080');
             background-size: cover;
             background-position: center;
             color: white;
@@ -183,168 +183,6 @@
             color: #2c3e50;
         }
         
-        /* Causes section */
-        .causes-list {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .cause-item {
-            margin-bottom: 30px;
-            background: white;
-            padding: 25px;
-            border-radius: 8px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .cause-item h3 {
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-        
-        .cause-item ul {
-            padding-left: 20px;
-        }
-        
-        .cause-item li {
-            margin-bottom: 8px;
-        }
-        
-        /* Effects section */
-        .effects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .effect-card {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-        }
-        
-        .effect-card h3 {
-            color: #e74c3c;
-            margin-bottom: 15px;
-            font-size: 1.3rem;
-        }
-        
-        /* Prevention section */
-        .prevention-steps {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .step {
-            display: flex;
-            margin-bottom: 30px;
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-            align-items: center;
-        }
-        
-        .step-number {
-            width: 50px;
-            height: 50px;
-            background: #3498db;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-right: 25px;
-            flex-shrink: 0;
-        }
-        
-        .step-content h3 {
-            margin-bottom: 10px;
-            color: #2c3e50;
-        }
-        
-        /* Contact section */
-        .contact-section {
-            background-color: #2c3e50;
-            color: white;
-            padding: 60px 0;
-        }
-        
-        .contact-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .contact-info h2 {
-            color: white;
-            margin-bottom: 25px;
-            font-size: 1.8rem;
-            position: relative;
-            padding-bottom: 15px;
-        }
-        
-        .contact-info h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 60px;
-            height: 3px;
-            background: #3498db;
-        }
-        
-        .contact-method {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 20px;
-        }
-        
-        .contact-icon {
-            font-size: 1.5rem;
-            color: #3498db;
-            margin-right: 15px;
-            margin-top: 3px;
-        }
-        
-        .contact-details h3 {
-            margin-bottom: 8px;
-            font-size: 1.2rem;
-        }
-        
-        .contact-details p {
-            opacity: 0.9;
-            line-height: 1.6;
-        }
-        
-        .action-steps {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
-            border-radius: 8px;
-        }
-        
-        .action-steps h3 {
-            color: white;
-            margin-bottom: 20px;
-            font-size: 1.4rem;
-        }
-        
-        .action-steps ol {
-            padding-left: 20px;
-        }
-        
-        .action-steps li {
-            margin-bottom: 15px;
-            line-height: 1.6;
-        }
-        
         /* Footer */
         footer {
             background-color: #1a252f;
@@ -394,6 +232,10 @@
             
             .section-title {
                 font-size: 1.6rem;
+            }
+            
+            .violence-types {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -454,7 +296,34 @@
         </div>
     </section>
 
-    <!-- Các phần khác giữ nguyên như nguyên bản -->
+    <!-- Placeholder sections for other content -->
+    <section id="causes" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Nguyên Nhân</h2>
+            <!-- Nội dung nguyên nhân -->
+        </div>
+    </section>
+
+    <section id="effects" class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Hậu Quả</h2>
+            <!-- Nội dung hậu quả -->
+        </div>
+    </section>
+
+    <section id="prevention" class="section section-gray">
+        <div class="container">
+            <h2 class="section-title">Phòng Tránh</h2>
+            <!-- Nội dung phòng tránh -->
+        </div>
+    </section>
+
+    <section id="contact" class="section section-white">
+        <div class="container">
+            <h2 class="section-title">Liên Hệ</h2>
+            <!-- Nội dung liên hệ -->
+        </div>
+    </section>
 
     <footer>
         <div class="container">
