@@ -5,238 +5,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chung Tay Đẩy Lùi Bạo Lực Học Đường</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #3498db;
+            --light-bg: #f9f9f9;
+            --text-color: #333;
+            --white: #ffffff;
+        }
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
         }
 
         body {
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--light-bg);
         }
 
         /* Header */
         header {
-            background-color: #2c3e50;
-            color: white;
-            padding: 15px 0;
-            position: fixed;
-            width: 100%;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .logo {
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        nav ul {
-            display: flex;
-            list-style: none;
-            flex-wrap: wrap;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 5px 0;
-            position: relative;
-        }
-
-        nav ul li a::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: #3498db;
-            bottom: 0;
-            left: 0;
-            transition: width 0.3s;
-        }
-
-        nav ul li a:hover::after {
-            width: 100%;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: 0.5px;
         }
 
         /* Hero section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://via.placeholder.com/1920x1080');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
             background-size: cover;
             background-position: center;
-            color: white;
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
             text-align: center;
-            padding: 180px 0 100px;
-            margin-top: 60px;
+            color: var(--white);
         }
 
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            line-height: 1.3;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 30px;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #e74c3c;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: background-color 0.3s;
-        }
-
-        .btn:hover {
-            background-color: #c0392b;
-        }
-
-        /* Main content sections */
+        /* Content sections */
         .section {
-            padding: 80px 0;
-            scroll-margin-top: 80px; /* Fix anchor link scrolling */
-        }
-
-        .section-white {
-            background-color: white;
-        }
-
-        .section-gray {
-            background-color: #f5f5f5;
+            padding: 5rem 0;
+            scroll-margin-top: 80px;
         }
 
         .section-title {
-            text-align: center;
-            margin-bottom: 50px;
-            font-size: 2rem;
-            color: #2c3e50;
             position: relative;
+            padding-bottom: 1rem;
+            margin-bottom: 3rem;
+            text-align: center;
         }
 
         .section-title::after {
             content: '';
-            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
             width: 80px;
             height: 4px;
-            background: #3498db;
-            margin: 15px auto 0;
+            background: var(--accent-color);
         }
 
-        /* Violence types */
-        .violence-types {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .violence-type {
-            background: white;
-            padding: 30px;
-            border-radius: 10px;
+        /* Causes section */
+        .cause-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 2rem;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .violence-type:hover {
+        .cause-card:hover {
             transform: translateY(-10px);
         }
 
-        .violence-icon {
-            font-size: 3rem;
-            color: #e74c3c;
-            margin-bottom: 20px;
-            display: inline-block;
+        /* Prevention section */
+        .prevention-step {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+            margin-bottom: 2rem;
         }
 
-        .violence-type h3 {
-            margin-bottom: 15px;
-            color: #2c3e50;
+        .step-number {
+            background: var(--accent-color);
+            color: var(--white);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            flex-shrink: 0;
         }
 
-        /* Footer */
-        footer {
-            background-color: #1a252f;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        /* Responsive design */
+        /* Responsive */
         @media (max-width: 768px) {
-            .header-container {
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .prevention-step {
                 flex-direction: column;
-                text-align: center;
-            }
-
-            nav ul {
-                margin-top: 15px;
-                justify-content: center;
-            }
-
-            nav ul li {
-                margin: 0 10px;
-            }
-
-            .hero h1 {
-                font-size: 2rem;
-            }
-
-            .hero {
-                padding: 150px 0 80px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            nav ul li {
-                margin: 5px 0;
-            }
-
-            .hero h1 {
-                font-size: 1.8rem;
-            }
-
-            .section-title {
-                font-size: 1.6rem;
-            }
-
-            .violence-types {
-                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
     </style>
@@ -244,158 +131,94 @@
 </head>
 <body>
     <header>
-        <div class="container header-container">
+        <div class="container">
             <div class="logo">Chung Tay Đẩy Lùi Bạo Lực Học Đường</div>
-            <nav>
-                <ul>
-                    <li><a href="#home">Trang chủ</a></li>
-                    <li><a href="#definition">Khái niệm</a></li>
-                    <li><a href="#causes">Nguyên nhân</a></li>
-                    <li><a href="#effects">Hậu quả</a></li>
-                    <li><a href="#prevention">Phòng tránh</a></li>
-                    <li><a href="#contact">Liên hệ</a></li>
-                </ul>
-            </nav>
         </div>
     </header>
 
-    <section id="home" class="hero">
+    <section class="hero">
         <div class="container">
-            <h1>MỘT MÔI TRƯỜNG HỌC TẬP AN TOÀN</h1>
-            <p>Bạo lực học đường không phải là giải pháp. Cùng nhau xây dựng môi trường học tập thân thiện, lành mạnh.</p>
-            <a href="#contact" class="btn">Cần giúp đỡ?</a>
+            <h1>Xây Dựng Môi Trường Học Tập An Toàn</h1>
+            <p class="lead">Cùng nhau ngăn chặn bạo lực học đường vì tương lai tốt đẹp của trẻ em</p>
         </div>
     </section>
 
-    <section id="definition" class="section section-white">
+    <section id="causes" class="section bg-light">
         <div class="container">
-            <h2 class="section-title">Khái Niệm Bạo Lực Học Đường</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">Bạo lực học đường là hành vi gây tổn hại về thể chất hoặc tinh thần của học sinh, xảy ra trong hoặc ngoài trường học, bao gồm các hình thức sau:</p>
+            <h2 class="section-title">Nguyên Nhân Chính</h2>
+            <div class="grid">
+                <div class="cause-card">
+                    <h3><i class="fas fa-users mr-2"></i> Yếu tố gia đình</h3>
+                    <ul class="mt-3">
+                        <li>Thiếu sự quan tâm từ cha mẹ</li>
+                        <li>Bạo lực gia đình</li>
+                        <li>Phương pháp giáo dục không phù hợp</li>
+                    </ul>
+                </div>
+                
+                <div class="cause-card">
+                    <h3><i class="fas fa-graduation-cap mr-2"></i> Yếu tố nhà trường</h3>
+                    <ul class="mt-3">
+                        <li>Áp lực học tập quá lớn</li>
+                        <li>Thiếu hoạt động giáo dục kỹ năng sống</li>
+                        <li>Quản lý học sinh chưa hiệu quả</li>
+                    </ul>
+                </div>
+                
+                <div class="cause-card">
+                    <h3><i class="fas fa-gamepad mr-2"></i> Yếu tố xã hội</h3>
+                    <ul class="mt-3">
+                        <li>Ảnh hưởng từ phim ảnh, game bạo lực</li>
+                        <li>Sử dụng mạng xã hội thiếu kiểm soát</li>
+                        <li>Bắt chước hành vi xấu từ bạn bè</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="prevention" class="section">
+        <div class="container">
+            <h2 class="section-title">Biện Pháp Phòng Tránh</h2>
             
-            <div class="violence-types">
-                <div class="violence-type">
-                    <div class="violence-icon"><i class="fas fa-user-injured"></i></div>
-                    <h3>Bạo lực thể chất</h3>
-                    <p>Đánh, đá, xô đẩy, gây thương tích, cố ý làm tổn hại sức khỏe người khác</p>
+            <div class="prevention-step">
+                <div class="step-number">1</div>
+                <div>
+                    <h3>Giáo dục kỹ năng sống</h3>
+                    <p>Tổ chức các chương trình đào tạo kỹ năng giải quyết mâu thuẫn, kiểm soát cảm xúc và giao tiếp hiệu quả cho học sinh.</p>
                 </div>
-                <div class="violence-type">
-                    <div class="violence-icon"><i class="fas fa-comment-slash"></i></div>
-                    <h3>Bạo lực ngôn ngữ</h3>
-                    <p>Chửi bới, đe dọa, bêu xấu, xúc phạm, làm nhục bằng lời nói</p>
+            </div>
+            
+            <div class="prevention-step">
+                <div class="step-number">2</div>
+                <div>
+                    <h3>Tăng cường giám sát</h3>
+                    <p>Bố trí hệ thống camera giám sát tại các khu vực trường học, tăng cường sự hiện diện của giáo viên trong giờ ra chơi.</p>
                 </div>
-                <div class="violence-type">
-                    <div class="violence-icon"><i class="fas fa-brain"></i></div>
-                    <h3>Bạo lực tinh thần</h3>
-                    <p>Chế giễu, bắt nạt, tẩy chay, cô lập, gây áp lực tâm lý</p>
+            </div>
+            
+            <div class="prevention-step">
+                <div class="step-number">3</div>
+                <div>
+                    <h3>Hỗ trợ tâm lý</h3>
+                    <p>Thành lập phòng tư vấn tâm lý học đường với các chuyên gia có kinh nghiệm.</p>
                 </div>
-                <div class="violence-type">
-                    <div class="violence-icon"><i class="fas fa-laptop"></i></div>
-                    <h3>Bạo lực mạng</h3>
-                    <p>Cyberbullying, bôi nhọ danh dự trên mạng xã hội, phát tán thông tin sai sự thật</p>
+            </div>
+            
+            <div class="prevention-step">
+                <div class="step-number">4</div>
+                <div>
+                    <h3>Phối hợp gia đình - nhà trường</h3>
+                    <p>Tổ chức các buổi họp phụ huynh định kỳ để trao đổi thông tin và phối hợp giáo dục.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="causes" class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Nguyên Nhân</h2>
-            <div class="causes-list">
-                <div class="cause-item">
-                    <h3>Các nguyên nhân chính</h3>
-                    <ul>
-                        <li>Thiếu kỹ năng giải quyết mâu thuẫn</li>
-                        <li>Ảnh hưởng từ gia đình và môi trường sống</li>
-                        <li>Áp lực học tập và thi cử</li>
-                        <li>Bắt chước hành vi bạo lực từ phim ảnh, game</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="effects" class="section section-white">
-        <div class="container">
-            <h2 class="section-title">Hậu Quả</h2>
-            <div class="effects-grid">
-                <div class="effect-card">
-                    <h3>Đối với nạn nhân</h3>
-                    <ul>
-                        <li>Tổn thương thể chất và tinh thần</li>
-                        <li>Suy giảm kết quả học tập</li>
-                        <li>Rối loạn tâm lý, trầm cảm</li>
-                    </ul>
-                </div>
-                <div class="effect-card">
-                    <h3>Đối với nhà trường</h3>
-                    <ul>
-                        <li>Mất trật tự, an ninh học đường</li>
-                        <li>Ảnh hưởng đến chất lượng giáo dục</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="prevention" class="section section-gray">
-        <div class="container">
-            <h2 class="section-title">Phòng Tránh</h2>
-            <div class="prevention-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Giáo dục nhận thức</h3>
-                        <p>Tổ chức các buổi nói chuyện, hội thảo về phòng chống bạo lực học đường</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Xây dựng môi trường thân thiện</h3>
-                        <p>Khuyến khích học sinh chia sẻ, lắng nghe và giúp đỡ lẫn nhau</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="section section-white">
-        <div class="container">
-            <h2 class="section-title">Liên Hệ Báo Cáo</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h2>Đường dây nóng</h2>
-                    <div class="contact-method">
-                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
-                        <div class="contact-details">
-                            <h3>Điện thoại</h3>
-                            <p>1800.1567 (Miễn phí)</p>
-                        </div>
-                    </div>
-                    <div class="contact-method">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-details">
-                            <h3>Email</h3>
-                            <p>baoluchocduong@moet.gov.vn</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="action-steps">
-                    <h3>Cách báo cáo</h3>
-                    <ol>
-                        <li>Ghi lại thời gian, địa điểm xảy ra</li>
-                        <li>Thu thập bằng chứng (nếu có)</li>
-                        <li>Liên hệ qua các kênh hỗ trợ</li>
-                    </ol>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
+    <footer class="bg-dark text-white py-4">
+        <div class="container text-center">
             <p>© 2023 Chung Tay Đẩy Lùi Bạo Lực Học Đường</p>
-            <p>Mọi hành vi bạo lực học đường cần được báo cáo và xử lý kịp thời</p>
+            <p class="mt-2">Mọi hành vi bạo lực cần được báo cáo kịp thời</p>
         </div>
     </footer>
 </body>
